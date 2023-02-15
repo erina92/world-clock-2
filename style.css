@@ -1,41 +1,125 @@
-* {
-    box-sizing: border-box;
-}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    font-family: "Poppins", sans-serif;
+    background-image: url("https://images.pexels.com/photos/4577121/pexels-photo-4577121.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
-h1 {
-    text-align: center;
-    margin: 30px 0;
+.background-image {
+    background-image: url("https: //images.pexels.com/photos/4577121/pexels-photo-4577121.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;
+    z-index: -1;
 }
 
-.clock-container {
-    display: flex;
-    justify-content: space-around;
+.container {
+    max-width: 800px;
     margin: 0 auto;
-    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .clock {
-    border: 2px solid #333;
-    border-radius: 5px;
-    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: #333;
+    font-size: 30px;
+    font-weight: 700;
 }
 
-.location {
-    font-size: 24px;
-    font-weight: bold;
+.clock h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
 }
 
 .time {
-    font-size: 48px;
-    margin-top: 20px;
+    font-size: 40px;
+}
+
+/* Small screens (up to 414px) */
+@media only screen and (max-width: 414px) {
+    .clock-container {
+        margin-top: 20px;
+    }
+
+    .clock {
+        width: 90vw;
+        height: 90vw;
+    }
+
+    .clock-text {
+        font-size: 2.5em;
+    }
+}
+
+/* Medium screens (between 414px and 768px) */
+@media only screen and (min-width: 414px) and (max-width: 768px) {
+    .clock-container {
+        margin-top: 50px;
+    }
+
+    .clock {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .clock-text {
+        font-size: 3.5em;
+    }
+}
+
+/* Large screens (between 768px and 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .clock-container {
+        margin-top: 80px;
+    }
+
+    .clock {
+        width: 50vw;
+        height: 50vw;
+    }
+
+    .clock-text {
+        font-size: 4em;
+    }
+}
+
+/* Extra large screens (above 1024px) */
+@media only screen and (min-width: 1024px) {
+    .clock-container {
+        margin-top: 100px;
+    }
+
+    .clock {
+        width: 40vw;
+        height: 40vw;
+    }
+
+    .clock-text {
+        font-size: 5em;
+    }
 }
